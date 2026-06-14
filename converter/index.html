@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="스마트스토어 등 쇼핑몰 상세페이지 HTML을 에이블리 등 모바일 판매 채널에 붙여넣기 쉬운 HTML로 정리하는 무료 변환기입니다. 입력한 HTML은 서버로 전송되지 않습니다." />
+<meta name="keywords" content="상세페이지 HTML 변환기, 스마트스토어 HTML 변환, 에이블리 상세페이지, 쇼핑몰 상세페이지 HTML, 상품 상세페이지 변환" />
+<link rel="canonical" href="https://oezworks.com/converter/" />
+<meta property="og:title" content="상세페이지 HTML 변환기 - 스마트스토어 HTML을 판매 채널용으로 정리" />
+<meta property="og:description" content="스마트스토어 등 쇼핑몰 상세페이지 HTML을 에이블리 등 모바일 판매 채널에 붙여넣기 쉬운 HTML로 변환합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oezworks.com/converter/" />
+<title>상세페이지 HTML 변환기 | 스마트스토어 HTML을 에이블리용으로 정리</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="88">🪄</text></svg>' />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2667365474859426"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+<div class="app-container">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <a class="logo" href="/converter/">
+          상세페이지 HTML 변환기
+          <span class="logo-badge">무료</span>
+        </a>
+        <span class="logo-sub">스마트스토어 상세페이지 HTML을 에이블리 및 모바일 채널용 코드로 정제합니다.</span>
+      </div>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="/converter/" aria-current="page">변환기</a>
+        <a href="/converter/about/">소개</a>
+        <a href="/converter/privacy/">개인정보처리방침</a>
+        <a href="/converter/contact/">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-label="도구 소개">
+      <div class="intro-text">
+        <h2><span class="headline-icon" aria-hidden="true">🪄</span> 스마트스토어 상세페이지를 판매 채널용 HTML로 정리하세요</h2>
+        <p class="lead">원본 상세페이지 HTML을 붙여넣으면 이미지, 문단, 인라인 스타일을 중심으로 정리해 에이블리 등 모바일 판매 채널에 맞는 HTML을 만들어줍니다.</p>
+        <p>네이버 스마트에디터 계열 HTML의 불필요한 클래스, 동영상 임베드, 복잡한 레이아웃을 덜어내고 복사 가능한 결과와 미리보기를 바로 확인할 수 있습니다.</p>
+      </div>
+      <div class="trust-badges" aria-label="처리 방식">
+        <span class="trust-badge">브라우저 내부 처리</span>
+        <span class="trust-badge">서버 저장 없음</span>
+        <span class="trust-badge">모바일 폭 기준</span>
+      </div>
+    </section>
+
+    <!-- Google AdSense - Banner Slot -->
+    <div class="adsense-container">
+      <!-- 이곳에 구글 애드센스 광고 코드(<ins class="adsbygoogle" ...>)를 삽입하세요 -->
+    </div>
+
+    <div class="card">
+      <section class="toolbar" aria-label="변환 설정">
+        <button class="btn btn-primary" id="convertBtn" type="button">변환하기</button>
+        <div class="toolbar-group">
+          <label>두 사진 너비(%) <input type="number" id="pairWidth" value="48" min="30" max="50" step="1" /></label>
+          <label>본문 글씨(px) <input type="number" id="baseFont" value="15" min="11" max="24" step="1" /></label>
+          <label><input type="checkbox" id="removeVideo" checked /> 동영상 제거</label>
+          <label><input type="checkbox" id="autoConvert" checked /> 붙여넣으면 자동 변환</label>
+        </div>
+      </section>
+
+      <div class="status" id="status">왼쪽에 상세페이지 HTML을 붙여넣고 변환하기를 누르세요. 입력한 내용은 브라우저 안에서만 처리됩니다.</div>
+
+      <section class="workspace" aria-label="HTML 변환 작업 영역">
+        <div class="column">
+          <div class="column-head">
+            <h2>1. 원본 HTML</h2>
+          </div>
+          <textarea id="input" placeholder="상세페이지 HTML을 여기에 붙여넣으세요. 예: &lt;div class=&quot;se-main-container&quot;&gt;..."></textarea>
+        </div>
+
+        <div class="column">
+          <div class="column-head">
+            <h2>2. 변환 결과</h2>
+            <div class="actions">
+              <button class="btn btn-secondary" id="copyBtn" type="button">결과 복사</button>
+              <button class="btn btn-secondary" id="downloadBtn" type="button">HTML 저장</button>
+            </div>
+          </div>
+          <textarea id="output" placeholder="변환 결과가 여기에 표시됩니다." readonly></textarea>
+        </div>
+
+        <div class="column">
+          <div class="column-head">
+            <h2>3. 미리보기</h2>
+          </div>
+          <div class="preview-box"><iframe id="preview" title="변환 결과 미리보기"></iframe></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="notice" aria-label="사용 전 확인 사항">
+      <strong>참고:</strong> 외부 이미지 주소는 판매 채널에서 차단될 수 있습니다. 이미지가 깨지면 해당 이미지를 직접 내려받아 판매 채널에 업로드한 뒤 상세페이지 HTML을 다시 조정하세요.<br />
+      <span style="display:block; margin-top: 6px;"></span>
+      <strong>주의:</strong> 타사 서비스명, 플랫폼 로고, 사입처 이미지, 저작권이 있는 문구가 포함되어 있다면 게시 전 직접 확인하고 삭제해야 합니다.
+    </section>
+
+
+
+    <section class="features-grid" aria-label="상세페이지 HTML 변환기 설명">
+      <article class="feature-card">
+        <h3>스마트스토어 HTML 정리</h3>
+        <p>스마트스토어 상세페이지에서 복사한 HTML을 읽어 문단, 이미지, 캡션 중심의 단순한 코드로 정리합니다.</p>
+      </article>
+      <article class="feature-card">
+        <h3>에이블리 상세페이지 준비</h3>
+        <p>에이블리 등 모바일 판매 채널에 붙여넣기 쉬운 폭과 중앙 정렬 구조로 변환 결과를 생성합니다.</p>
+      </article>
+      <article class="feature-card">
+        <h3>브라우저 안에서 변환</h3>
+        <p>입력한 HTML은 서버로 업로드하지 않고 현재 브라우저에서만 처리하므로 빠르게 확인하고 복사할 수 있습니다.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Detail HTML Converter. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/converter/privacy/">개인정보처리방침</a>
+        <span>·</span>
+        <a href="/converter/contact/">문의</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+function opts(){
+  return {
+    pairW: Math.min(50, Math.max(30, parseInt(document.getElementById('pairWidth').value, 10) || 48)),
+    baseFont: parseInt(document.getElementById('baseFont').value, 10) || 15,
+    removeVideo: document.getElementById('removeVideo').checked
+  };
+}
+
+function escapeAttr(value){
+  return String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+function mapFs(n){
+  const table = {11:15, 13:16, 15:17, 16:19, 19:22, 24:28, 30:34, 38:40};
+  return table[n] || n;
+}
+
+function cleanInline(node){
+  node.querySelectorAll('*').forEach(el => {
+    const color = el.style && el.style.color ? el.style.color : '';
+    let fs = '';
+    (el.getAttribute('class') || '').split(/\s+/).forEach(c => {
+      const m = c.match(/^se-fs-fs(\d+)$/);
+      if (m) fs = mapFs(parseInt(m[1], 10));
+    });
+    [...el.attributes].forEach(a => el.removeAttribute(a.name));
+    let style = '';
+    if (color) style += 'color:' + color + ';';
+    if (fs) style += 'font-size:' + fs + 'px;';
+    if (style) el.setAttribute('style', style);
+  });
+}
+
+function imgSrc(img){
+  return img.getAttribute('src') || img.getAttribute('data-src') || '';
+}
+
+function singleImg(src, maxw){
+  const cap = maxw ? 'max-width:' + maxw + 'px;' : 'max-width:600px;';
+  return '  <div style="margin:14px 0;"><img src="' + escapeAttr(src) + '" style="' + cap + 'width:100%;height:auto;" /></div>\n';
+}
+
+function multiImg(srcs, pairW){
+  const w = srcs.length === 2 ? pairW : (100 / srcs.length - 2).toFixed(1);
+  const inner = srcs.map(s => '<img src="' + escapeAttr(s) + '" style="width:' + w + '%;height:auto;" />').join('\n    ');
+  return '  <div style="display:flex;justify-content:space-between;margin:14px 0;">\n    ' + inner + '\n  </div>\n';
+}
+
+function emitText(el){
+  let html = '';
+  el.querySelectorAll('p, img').forEach(n => {
+    if (n.tagName === 'IMG') {
+      const src = imgSrc(n);
+      if (src) html += singleImg(src);
+    } else {
+      const c = n.cloneNode(true);
+      cleanInline(c);
+      if (c.textContent.trim() === '') return;
+      html += '  <p style="margin:8px 0;">' + c.innerHTML.trim() + '</p>\n';
+    }
+  });
+  return html;
+}
+
+function emitQuote(el){
+  const c = el.cloneNode(true);
+  cleanInline(c);
+  const ps = [...c.querySelectorAll('p')]
+    .filter(p => p.textContent.trim())
+    .map(p => '<p style="margin:0 0 6px;">' + p.innerHTML.trim() + '</p>')
+    .join('');
+  if (!ps) return '';
+  return '  <blockquote style="margin:20px auto;padding:16px;background:#f7f7f7;border-radius:8px;">' + ps + '</blockquote>\n';
+}
+
+function getMaxWidth(el){
+  const sec = el.querySelector('[style*="max-width"]');
+  if (sec) {
+    const m = (sec.getAttribute('style') || '').match(/max-width:\s*(\d+)px/);
+    if (m) return parseInt(m[1], 10);
+  }
+  return 0;
+}
+
+function convert(raw){
+  const o = opts();
+  const doc = new DOMParser().parseFromString(raw, 'text/html');
+  const root = doc.querySelector('.se-main-container') || doc.body;
+  let comps = [...root.querySelectorAll(':scope > .se-component')];
+  if (comps.length === 0) comps = [...root.querySelectorAll('.se-component')];
+
+  let body = '';
+  let removedVideos = 0;
+  let imgCount = 0;
+
+  comps.forEach(el => {
+    const cl = el.classList;
+    const hasMedia = el.querySelector('iframe, video');
+    const isVideo = cl.contains('se-video') || cl.contains('se-oembed') || cl.contains('se-oglink') || hasMedia;
+
+    if (isVideo && o.removeVideo) {
+      removedVideos++;
+      return;
+    }
+
+    if (cl.contains('se-imageStrip') || cl.contains('se-imageGroup')) {
+      const srcs = [...el.querySelectorAll('.se-module-image img')].map(imgSrc).filter(Boolean);
+      imgCount += srcs.length;
+      if (srcs.length === 1) body += singleImg(srcs[0]);
+      else if (srcs.length >= 2) body += multiImg(srcs, o.pairW);
+      const cap = el.querySelector('.se-caption');
+      if (cap && cap.textContent.trim()) {
+        body += '  <p style="margin:6px 0;font-size:13px;color:#888;">' + cap.textContent.trim() + '</p>\n';
+      }
+    } else if (cl.contains('se-image')) {
+      const img = el.querySelector('.se-module-image img');
+      if (img) {
+        const src = imgSrc(img);
+        if (src) {
+          imgCount++;
+          body += singleImg(src, getMaxWidth(el));
+        }
+      }
+    } else if (cl.contains('se-quotation')) {
+      body += emitQuote(el);
+    } else if (cl.contains('se-text')) {
+      body += emitText(el);
+    } else {
+      body += emitText(el);
+    }
+  });
+
+  const wrapStart = '<div style="max-width:600px;margin:0 auto;padding:0 10px;text-align:center;color:#333;line-height:1.7;font-family:\'맑은 고딕\',sans-serif;font-size:' + o.baseFont + 'px;">\n\n';
+  return { out: wrapStart + body + '\n</div>', removedVideos, imgCount, comps: comps.length };
+}
+
+function run(){
+  const raw = document.getElementById('input').value.trim();
+  const status = document.getElementById('status');
+  if (!raw) {
+    status.className = 'status';
+    status.textContent = '왼쪽에 HTML을 붙여넣어 주세요.';
+    return;
+  }
+  try {
+    const r = convert(raw);
+    document.getElementById('output').value = r.out;
+    document.getElementById('preview').srcdoc = r.out;
+    status.className = 'status success';
+    status.textContent = '변환 완료: 컴포넌트 ' + r.comps + '개 처리, 이미지 ' + r.imgCount + '개, 동영상 ' + r.removedVideos + '개 제거';
+  } catch (e) {
+    status.className = 'status warn';
+    status.textContent = '변환 중 오류: ' + e.message;
+  }
+}
+
+document.getElementById('convertBtn').addEventListener('click', run);
+document.getElementById('input').addEventListener('paste', () => {
+  if (document.getElementById('autoConvert').checked) setTimeout(run, 50);
+});
+['pairWidth', 'baseFont', 'removeVideo'].forEach(id => {
+  document.getElementById(id).addEventListener('change', () => {
+    if (document.getElementById('output').value) run();
+  });
+});
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  const out = document.getElementById('output');
+  if (!out.value) return;
+  try {
+    await navigator.clipboard.writeText(out.value);
+    document.getElementById('status').textContent = '결과를 복사했습니다. 판매 채널의 HTML 입력 영역에 붙여넣으세요.';
+  } catch (e) {
+    out.select();
+    document.execCommand('copy');
+  }
+});
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  const out = document.getElementById('output').value;
+  if (!out) return;
+  const blob = new Blob([out], {type: 'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'detail-page.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+</script>
+</body>
+</html>
