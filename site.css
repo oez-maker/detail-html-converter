@@ -184,12 +184,21 @@ main {
 }
 
 .intro-text h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-main);
   letter-spacing: -0.03em;
   margin-bottom: 8px;
+}
+
+.headline-icon {
+  flex: 0 0 auto;
+  font-size: 30px;
+  line-height: 1;
 }
 
 .intro-text .lead {
@@ -448,6 +457,7 @@ main {
 textarea {
   width: 100%;
   height: 900px;
+  min-height: 900px;
   flex: 1;
   resize: vertical;
   border: 0;
@@ -467,6 +477,7 @@ textarea:focus {
 
 .preview-box {
   height: 900px;
+  min-height: 900px;
   flex: 1;
   background: var(--surface-alt);
   overflow: hidden;
@@ -727,10 +738,12 @@ textarea:focus {
   
   textarea {
     height: 720px;
+    min-height: 720px;
   }
   
   .preview-box {
     height: 720px;
+    min-height: 720px;
   }
   
   .features-grid {
@@ -751,7 +764,13 @@ textarea:focus {
   }
   
   .intro-text h2 {
+    align-items: flex-start;
     font-size: 26px;
+  }
+
+  .headline-icon {
+    font-size: 24px;
+    margin-top: 3px;
   }
   
   .header-inner {
