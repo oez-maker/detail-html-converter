@@ -8,7 +8,7 @@ Static site for a browser-only detail page HTML converter.
 2. Connect a custom domain. Current production domain: `oezworks.com`.
 3. Submit the site to Google Search Console.
 4. Apply for Google AdSense.
-5. After approval, paste the AdSense code into the `<head>` of `index.html`.
+5. AdSense Auto Ads code is installed with publisher ID `ca-pub-2667365474859426`.
 
 ## Notes
 
