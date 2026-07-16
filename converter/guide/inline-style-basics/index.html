@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="상세페이지 HTML을 직접 수정하고 싶은 셀러를 위한 인라인 스타일 기초 문법입니다. 자주 쓰는 속성, 수정 요령, 흔한 실수를 예시와 함께 설명합니다." />
+<link rel="canonical" href="https://oezworks.com/converter/guide/inline-style-basics/" />
+<title>인라인 스타일로 상세페이지 만들기 기초 | 사용 가이드</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="88">🪄</text></svg>' />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2667365474859426" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/site.css?v=20260716" />
+</head>
+<body><div class="app-container">
+<header class="site-header"><div class="header-inner"><div class="logo-group"><a class="logo" href="/converter/">상세페이지 HTML 변환기 <span class="logo-badge">무료</span></a><span class="logo-sub">쇼핑몰 상세페이지 HTML을 모바일 판매 채널용 코드로 정제합니다.</span></div><nav class="site-nav" aria-label="사이트 메뉴"><a href="/">OEZ Works 홈</a><a href="/converter/">변환기</a><a href="/converter/guide/" aria-current="page">사용 가이드</a><a href="/blog/">블로그</a><a href="/about/">소개</a><a href="/contact/">문의</a></nav></div></header>
+<main><div class="article-layout"><article class="article-body"><span class="eyebrow">사용 가이드 09</span><h1>인라인 스타일로 상세페이지 만들기 기초</h1><div class="article-meta">작성일: 2026년 7월 9일 · 예상 읽기 시간 6분</div><p class="article-lead">변환 결과에서 글자 색을 바꾸거나 여백을 조절하고 싶은데 코드가 낯설어 손을 못 대는 분들이 많습니다. 상세페이지 수정에 필요한 인라인 스타일 문법은 사실 몇 가지 안 됩니다. 이 가이드만 읽어도 대부분의 수정을 직접 할 수 있습니다.</p>
+<h2>인라인 스타일이란</h2><p>HTML 태그의 <code>style</code> 속성 안에 꾸밈 규칙을 직접 적는 방식입니다. 판매 채널에는 별도의 CSS 파일을 올릴 수 없기 때문에, 상세페이지의 모든 스타일은 이렇게 태그 안에 넣어야 합니다. 규칙은 <code>속성:값;</code> 형태이고 세미콜론으로 구분해 여러 개를 이어 쓸 수 있습니다.</p>
+<pre><code>&lt;p style="color:#e53935; font-size:17px; margin:8px 0;"&gt;
+  오늘 단 하루, 특가!
+&lt;/p&gt;</code></pre>
+<p>위 코드는 "글자색은 빨강 계열(#e53935), 글자 크기는 17px, 위아래 바깥 여백은 8px"이라는 뜻입니다.</p>
+<h2>상세페이지에서 자주 쓰는 속성 7가지</h2><ul><li><code>color</code>: 글자 색. <code>#333333</code> 같은 색상 코드를 씁니다.</li><li><code>font-size</code>: 글자 크기. 모바일 본문은 15px 이상을 권합니다.</li><li><code>font-weight:bold</code>: 굵은 글씨. 강조 문구에 씁니다.</li><li><code>margin</code>: 요소 바깥 여백. <code>margin:14px 0;</code>은 위아래 14px, 좌우 0이라는 뜻입니다.</li><li><code>padding</code>: 요소 안쪽 여백. 배경색이 있는 박스에서 내용과 테두리 사이 간격을 만듭니다.</li><li><code>text-align:center</code>: 가운데 정렬. 변환 결과의 최상위 컨테이너에 이미 적용되어 있습니다.</li><li><code>background:#f7f7f7</code>: 배경색. 안내 박스나 인용 박스를 만들 때 씁니다.</li></ul>
+<h2>수정 요령: 통째로 바꾸지 말고 값만 바꾸세요</h2><p>변환 결과를 수정할 때는 태그 구조를 건드리지 말고 <code>style</code> 안의 값만 바꾸는 것이 안전합니다. 예를 들어 문단 간격을 넓히고 싶으면 <code>margin:8px 0;</code>의 8을 14로 바꾸면 되고, 강조 문구를 만들고 싶으면 해당 <code>p</code> 태그의 style에 <code>font-weight:bold; color:#e53935;</code>를 추가하면 됩니다. 수정한 뒤에는 변환기 입력창에 다시 붙여넣으면 미리보기로 결과를 확인할 수 있습니다.</p>
+<h2>흔한 실수 세 가지</h2><p>첫째, 따옴표 짝이 안 맞는 경우입니다. <code>style="..."</code>의 큰따옴표를 지우거나 하나만 남기면 그 지점부터 페이지가 통째로 깨집니다. 둘째, 세미콜론 누락입니다. <code>color:#333 font-size:15px</code>처럼 이어 붙이면 두 규칙 모두 무시될 수 있습니다. 셋째, 태그를 닫지 않는 경우입니다. <code>&lt;p&gt;</code>를 열었으면 <code>&lt;/p&gt;</code>로 닫아야 합니다. 수정 후 미리보기에서 레이아웃이 갑자기 무너졌다면 대부분 이 세 가지 중 하나입니다.</p>
+<h2>더 배우고 싶다면</h2><p>레이아웃 차원의 원칙(폭, 이미지, 정렬)은 <a href="/converter/guide/mobile-layout/">모바일 레이아웃 기본기</a>에서 다룹니다. 변환기가 어떤 태그를 남기고 지우는지 궁금하다면 <a href="/converter/guide/html-cleanup/">HTML 정리 원리</a>를 참고하세요. 직접 수정하다 도구가 처리해주면 좋겠다 싶은 패턴을 발견하면 <a href="/contact/">문의</a>로 알려주세요. 다음 기능에 반영됩니다.</p></article>
+<aside class="article-nav"><strong>가이드 목록</strong><a href="/converter/guide/how-to-use/">처음 사용하기</a><a href="/converter/guide/smartstore-html/">스마트스토어 HTML</a><a href="/converter/guide/image-errors/">이미지 오류</a><a href="/converter/guide/html-cleanup/">HTML 정리 원리</a><a href="/converter/guide/ably-upload/">판매 채널 적용</a><a href="/converter/guide/coupang-html/">쿠팡 적용 주의점</a><a href="/converter/guide/image-hosting/">이미지 호스팅 전략</a><a href="/converter/guide/mobile-layout/">모바일 레이아웃 기본기</a><a href="/converter/guide/inline-style-basics/" aria-current="page">인라인 스타일 기초</a><a href="/converter/guide/pre-upload-checklist/">게시 전 체크리스트</a></aside></div></main>
+<footer class="site-footer"><div class="footer-inner"><span>Copyright 2026 OEZ Works.</span><div class="footer-links"><a href="/converter/guide/">전체 가이드</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의</a></div></div></footer></div></body></html>

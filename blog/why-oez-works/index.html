@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="상세페이지를 손으로 고치던 온라인 셀러가 웹 도구를 만들어 공개하는 OEZ Works를 시작하게 된 이야기입니다." />
+<link rel="canonical" href="https://oezworks.com/blog/why-oez-works/" />
+<title>OEZ Works를 시작한 이유 | OEZ Works 블로그</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="88">🧰</text></svg>' />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2667365474859426" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/site.css?v=20260716" />
+</head>
+<body>
+<div class="app-container">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <a class="logo" href="/">OEZ Works <span class="logo-badge">작업실</span></a>
+        <span class="logo-sub">셀러와 크리에이터를 위한 작은 웹 도구를 만들어 공개합니다.</span>
+      </div>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="/">홈</a>
+        <a href="/converter/">HTML 변환기</a>
+        <a href="/converter/guide/">사용 가이드</a>
+        <a href="/blog/" aria-current="page">블로그</a>
+        <a href="/about/">소개</a>
+        <a href="/contact/">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="article-layout">
+      <article class="article-body">
+        <span class="eyebrow">개발기</span>
+        <h1>OEZ Works를 시작한 이유</h1>
+        <div class="article-meta">작성일: 2026년 6월 20일 · 예상 읽기 시간 4분</div>
+        <p class="article-lead">이 사이트의 첫 글이니 왜 이런 작업실을 시작했는지부터 이야기하려고 합니다. 출발점은 거창한 계획이 아니라, 매주 반복되는 상세페이지 복사 붙여넣기 지옥이었습니다.</p>
+
+        <h2>같은 상세페이지를 몇 번이고 다시 만들던 날들</h2>
+        <p>온라인 쇼핑몰을 운영하면 상품 하나를 여러 판매 채널에 올리는 일이 일상이 됩니다. 스마트스토어에서 공들여 만든 상세페이지를 에이블리에 올리려고 HTML을 복사해 붙여넣으면, 이미지 정렬이 무너지고 여백이 이상해지고 어떤 요소는 아예 사라졌습니다. 원인은 단순했습니다. 스마트에디터가 만들어내는 HTML에는 편집기 전용 클래스와 중첩 구조가 가득한데, 다른 채널에는 그 구조를 해석해줄 스타일이 없기 때문입니다.</p>
+        <p>처음에는 매번 손으로 고쳤습니다. 필요 없는 태그를 지우고, 이미지에 인라인 스타일을 다시 붙이고, 문단 간격을 맞추는 작업을 상품 하나에 이십 분씩 쓰다 보니, 신상품 열 개를 등록하는 날은 그 작업만 반나절이었습니다. 실수도 잦았습니다. 태그 하나를 잘못 지워서 상세페이지 절반이 통째로 사라진 채 게시된 적도 있습니다.</p>
+
+        <h2>반복 작업은 도구가 해야 한다</h2>
+        <p>세 번 이상 반복하는 작업은 자동화하라는 말이 있습니다. 손으로 고치는 규칙을 가만히 들여다보니 대부분 기계적인 규칙이었습니다. 문단은 남기고, 편집기 클래스는 지우고, 이미지는 폭을 지정해 가운데 정렬하고, 동영상은 채널이 지원하지 않으니 빼는 것. 이 규칙을 코드로 옮긴 것이 <a href="/converter/">상세페이지 HTML 변환기</a>의 시작이었습니다.</p>
+        <p>처음에는 제 컴퓨터에서만 돌아가는 조악한 스크립트였습니다. 그런데 셀러 커뮤니티에서 같은 고민을 하는 사람이 많다는 걸 알게 됐고, 어차피 만든 것 웹에 올려서 누구나 쓸 수 있게 하자고 마음먹었습니다. 회원가입 없이, 무료로, 입력한 HTML을 서버에 저장하지 않는 형태로요. 상세페이지에는 아직 공개 전인 상품 정보가 들어 있는 경우가 많아서, 데이터를 맡기지 않아도 되는 구조가 저 스스로에게도 필요했습니다.</p>
+
+        <h2>OEZ Works라는 이름</h2>
+        <p>OEZ는 제가 온라인에서 쓰는 별명 '오이지'에서 왔습니다. 거창한 회사가 아니라 필요한 도구를 하나씩 만들어 공개하는 작업실(Works)이라는 의미로 이름을 붙였습니다. 도구는 화려할 필요가 없다고 생각합니다. 한 가지 반복 작업을 확실하게 줄여주고, 무엇을 처리하고 무엇을 처리하지 못하는지 정직하게 알려주는 도구가 좋은 도구라고 믿습니다.</p>
+
+        <h2>앞으로 이 블로그에 쓸 것들</h2>
+        <p>이 블로그에는 세 종류의 글을 쓸 예정입니다. 첫째는 도구를 만들며 배운 것을 기록하는 개발기, 둘째는 새 기능과 변경 사항을 알리는 업데이트 노트, 셋째는 상세페이지와 판매 채널 운영에 실제로 도움이 되는 활용법입니다. 도구의 자세한 사용법은 <a href="/converter/guide/">사용 가이드</a>에 따로 정리하고, 블로그에서는 그 뒤에 있는 이야기를 다루겠습니다. 같은 문제로 시간을 쓰고 있는 분들에게 조금이나마 도움이 되면 좋겠습니다.</p>
+      </article>
+      <aside class="article-nav">
+        <strong>블로그 글 목록</strong>
+        <a href="/blog/roadmap/">앞으로 만들 도구들</a>
+        <a href="/blog/update-2026-07/">2026년 7월 업데이트 노트</a>
+        <a href="/blog/detail-page-workflow/">멀티채널 운영 워크플로</a>
+        <a href="/blog/browser-only-tools/">서버 없는 도구를 고집하는 이유</a>
+        <a href="/blog/converter-devlog-1/">변환기 개발기 1</a>
+        <a href="/blog/why-oez-works/" aria-current="page">OEZ Works를 시작한 이유</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 OEZ Works. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/about/">소개</a>
+        <span>·</span>
+        <a href="/privacy/">개인정보처리방침</a>
+        <span>·</span>
+        <a href="/contact/">문의</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

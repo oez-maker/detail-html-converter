@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="상세페이지 원본 하나를 만들어 스마트스토어, 에이블리 등 여러 판매 채널에 효율적으로 배포하는 실전 워크플로를 단계별로 정리했습니다." />
+<link rel="canonical" href="https://oezworks.com/blog/detail-page-workflow/" />
+<title>상세페이지 하나로 여러 판매 채널 운영하는 워크플로 | OEZ Works 블로그</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="88">🧰</text></svg>' />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2667365474859426" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/site.css?v=20260716" />
+</head>
+<body>
+<div class="app-container">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <a class="logo" href="/">OEZ Works <span class="logo-badge">작업실</span></a>
+        <span class="logo-sub">셀러와 크리에이터를 위한 작은 웹 도구를 만들어 공개합니다.</span>
+      </div>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="/">홈</a>
+        <a href="/converter/">HTML 변환기</a>
+        <a href="/converter/guide/">사용 가이드</a>
+        <a href="/blog/" aria-current="page">블로그</a>
+        <a href="/about/">소개</a>
+        <a href="/contact/">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="article-layout">
+      <article class="article-body">
+        <span class="eyebrow">활용법</span>
+        <h1>상세페이지 하나로 여러 판매 채널 운영하는 워크플로</h1>
+        <div class="article-meta">작성일: 2026년 7월 3일 · 예상 읽기 시간 6분</div>
+        <p class="article-lead">채널을 늘릴수록 상세페이지 관리가 기하급수적으로 어려워집니다. 채널마다 따로 만들면 수정할 때마다 전부 손대야 하고, 무작정 복사하면 레이아웃이 깨집니다. 제가 실제로 쓰는 "원본 하나, 채널별 변환" 방식을 정리합니다.</p>
+
+        <h2>1단계. 원본은 딱 하나만 관리한다</h2>
+        <p>모든 채널의 기준이 되는 원본 상세페이지를 하나 정합니다. 저는 스마트스토어의 스마트에디터로 만든 버전을 원본으로 삼습니다. 편집이 편하고 이미지 관리가 쉽기 때문입니다. 중요한 것은 상품 설명이 바뀔 때 항상 원본을 먼저 수정하고, 다른 채널은 원본에서 다시 만들어낸다는 규칙입니다. 채널별 버전을 따로따로 수정하기 시작하면 어느 채널에 어떤 내용이 올라가 있는지 금방 뒤엉킵니다.</p>
+
+        <h2>2단계. 원본 HTML을 파일로 보관한다</h2>
+        <p>원본 상세페이지의 HTML을 복사해 상품 코드별 폴더에 파일로 저장해 둡니다. 편집기 안에만 존재하는 상세페이지는 플랫폼 장애나 계정 문제가 생기면 접근할 수 없습니다. 파일로 보관해두면 백업이 될 뿐 아니라, 채널 추가나 리뉴얼 때 언제든 변환의 출발점으로 쓸 수 있습니다. 어떤 범위를 복사해야 하는지는 <a href="/converter/guide/smartstore-html/">스마트스토어 HTML 준비 가이드</a>에 정리되어 있습니다.</p>
+
+        <h2>3단계. 채널별로 변환한다</h2>
+        <p>에이블리처럼 HTML 입력을 지원하는 모바일 채널에는 <a href="/converter/">상세페이지 HTML 변환기</a>로 원본을 변환해 붙여넣습니다. 이때 채널 특성에 맞춰 옵션을 바꿉니다. 모바일 중심 채널은 본문 글씨를 15px 이상으로, 두 장 나란한 이미지는 48% 폭을 기본으로 두고 화면이 좁은 채널이면 46%까지 줄입니다. 동영상은 채널이 공식 지원하는 경우가 아니면 제거 옵션을 켠 채로 둡니다.</p>
+
+        <h2>4단계. 이미지는 채널에 직접 올린다</h2>
+        <p>변환보다 중요한 것이 이미지입니다. 원본 HTML의 이미지 주소는 원래 쇼핑몰의 서버를 가리키는데, 다른 채널에서 그 주소를 그대로 쓰면 차단되어 깨질 수 있습니다. 주력 상품은 이미지를 내려받아 각 채널의 업로드 기능으로 다시 올리고, 변환 결과의 이미지 주소를 교체하는 것을 원칙으로 하세요. 자세한 판별법은 <a href="/converter/guide/image-errors/">이미지 오류 가이드</a>와 <a href="/converter/guide/image-hosting/">이미지 호스팅 전략 가이드</a>를 참고하세요.</p>
+
+        <h2>5단계. 게시 전 모바일 미리보기로 검수한다</h2>
+        <p>붙여넣었다고 끝이 아닙니다. 각 채널의 모바일 미리보기에서 이미지 비율, 문단 간격, 잘린 요소가 없는지 확인하고, 가격·배송·인증 같은 필수 정보가 채널별 입력란과 어긋나지 않는지 점검합니다. 검수 항목을 매번 기억하기 어렵다면 <a href="/converter/guide/pre-upload-checklist/">게시 전 체크리스트</a>를 그대로 따라가면 됩니다.</p>
+
+        <h2>이 워크플로의 핵심</h2>
+        <p>요약하면 "원본은 하나, 파일로 백업, 채널별은 변환으로 생성, 이미지는 채널에 직접 업로드, 게시 전 모바일 검수"입니다. 상품 열 개를 세 채널에 운영한다면 관리하는 상세페이지는 서른 개가 아니라 열 개가 되고, 수정도 원본 열 개만 고치면 됩니다. 반복 작업이 줄어든 시간은 상품 소싱과 고객 응대처럼 도구가 대신할 수 없는 일에 쓰세요.</p>
+      </article>
+      <aside class="article-nav">
+        <strong>블로그 글 목록</strong>
+        <a href="/blog/roadmap/">앞으로 만들 도구들</a>
+        <a href="/blog/update-2026-07/">2026년 7월 업데이트 노트</a>
+        <a href="/blog/detail-page-workflow/" aria-current="page">멀티채널 운영 워크플로</a>
+        <a href="/blog/browser-only-tools/">서버 없는 도구를 고집하는 이유</a>
+        <a href="/blog/converter-devlog-1/">변환기 개발기 1</a>
+        <a href="/blog/why-oez-works/">OEZ Works를 시작한 이유</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 OEZ Works. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/about/">소개</a>
+        <span>·</span>
+        <a href="/privacy/">개인정보처리방침</a>
+        <span>·</span>
+        <a href="/contact/">문의</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

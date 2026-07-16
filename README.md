@@ -1,18 +1,31 @@
-# Detail HTML Converter
+# OEZ Works (oezworks.com)
 
-Static site for a browser-only detail page HTML converter.
+Static hub site for OEZ Works: free browser-only web tools for online sellers,
+plus usage guides and a blog.
+
+## Structure
+
+- `/` — hub homepage (site intro, service cards, latest posts)
+- `/about/`, `/privacy/`, `/contact/` — shared site pages (single source at root)
+- `/blog/` — devlogs, update notes, how-to articles
+- `/converter/` — Detail HTML Converter tool
+- `/converter/guide/` — converter usage guides
+- `/converter/about|privacy|contact/` — redirect stubs to the root pages (kept for old indexed URLs)
 
 ## Deploy
 
-1. Deploy this folder to Vercel, Netlify, GitHub Pages, or Cloudflare Pages.
+1. Deploy this folder to GitHub Pages (current), Vercel, Netlify, or Cloudflare Pages.
 2. Connect a custom domain. Current production domain: `oezworks.com`.
-3. Submit the site to Google Search Console.
-4. Apply for Google AdSense.
-5. AdSense verification code is installed only on the main converter page. Utility and policy pages intentionally contain no ad code.
+3. Submit `/sitemap.xml` to Google Search Console after deployment.
+
+## AdSense
+
+- Publisher: `ca-pub-2667365474859426` (`ads.txt` at root).
+- The AdSense loader snippet is installed in the `<head>` of every content page
+  (root pages, blog, converter, guides). Redirect stubs carry no ad code.
 
 ## Notes
 
-- The converter runs entirely in the browser.
-- User input is not sent to a backend by this site.
+- The converter runs entirely in the browser; user input is not sent to a backend.
 - External image URLs in converted HTML may still be blocked by the target sales channel.
-- Submit `/sitemap.xml` to Google Search Console after deployment.
+- Social links on `/about/` are placeholders — replace with real account URLs.

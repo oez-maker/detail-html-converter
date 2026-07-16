@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="상세페이지 이미지가 판매 채널에서 깨지지 않도록 하는 호스팅과 업로드 전략을 설명합니다. 외부 이미지의 위험, 채널 직접 업로드, 파일 관리 방법을 다룹니다." />
+<link rel="canonical" href="https://oezworks.com/converter/guide/image-hosting/" />
+<title>상세페이지 이미지 호스팅과 업로드 전략 | 사용 가이드</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="88">🪄</text></svg>' />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2667365474859426" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/site.css?v=20260716" />
+</head>
+<body><div class="app-container">
+<header class="site-header"><div class="header-inner"><div class="logo-group"><a class="logo" href="/converter/">상세페이지 HTML 변환기 <span class="logo-badge">무료</span></a><span class="logo-sub">쇼핑몰 상세페이지 HTML을 모바일 판매 채널용 코드로 정제합니다.</span></div><nav class="site-nav" aria-label="사이트 메뉴"><a href="/">OEZ Works 홈</a><a href="/converter/">변환기</a><a href="/converter/guide/" aria-current="page">사용 가이드</a><a href="/blog/">블로그</a><a href="/about/">소개</a><a href="/contact/">문의</a></nav></div></header>
+<main><div class="article-layout"><article class="article-body"><span class="eyebrow">사용 가이드 07</span><h1>상세페이지 이미지 호스팅과 업로드 전략</h1><div class="article-meta">작성일: 2026년 7월 1일 · 예상 읽기 시간 5분</div><p class="article-lead">변환한 HTML이 아무리 깔끔해도 이미지 주소가 부실하면 상세페이지는 언제든 깨질 수 있습니다. 이미지를 어디에 두고 어떻게 관리할지는 HTML 정리만큼 중요한 문제입니다.</p>
+<h2>외부 이미지 주소의 세 가지 위험</h2><p>원본 상세페이지의 이미지 주소는 대부분 원래 쇼핑몰의 서버를 가리킵니다. 이 주소를 다른 채널에서 그대로 쓰면 세 가지 위험이 생깁니다. 첫째, 원본 쇼핑몰이 외부 사이트에서의 이미지 호출을 차단(핫링크 차단)하면 이미지가 즉시 깨집니다. 지금 보인다고 해서 계속 보인다는 보장이 없습니다. 둘째, 원본 상품을 내리거나 상세페이지를 수정하면 이미지 주소 자체가 사라질 수 있습니다. 셋째, http 주소 이미지는 https 페이지 안에서 브라우저가 혼합 콘텐츠로 차단할 수 있습니다.</p>
+<h2>기본 전략: 채널에 직접 업로드</h2><p>가장 안전한 방법은 각 판매 채널이 제공하는 이미지 업로드 기능을 쓰는 것입니다. 채널 서버에 올라간 이미지는 그 채널이 서비스되는 한 깨질 일이 없고, 차단 정책의 영향도 받지 않습니다. 순서는 이렇습니다.</p><ul><li>원본 상세페이지에서 이미지 파일을 컴퓨터로 내려받습니다. 이때 사용 권한이 있는 이미지인지 반드시 확인하세요.</li><li>판매 채널의 에디터나 이미지 관리 메뉴에서 파일을 업로드합니다.</li><li>업로드 후 발급된 이미지 주소를 복사합니다.</li><li>변환 결과 HTML에서 기존 <code>src</code> 주소를 새 주소로 교체합니다.</li></ul><p>상품 수가 많으면 번거롭게 느껴지지만, 판매가 오래갈 주력 상품일수록 이 과정을 거쳐야 합니다. 노출 순위에 영향을 주는 상세페이지가 어느 날 갑자기 깨진 채 며칠 방치되는 것보다 등록할 때 십 분 더 쓰는 편이 쌉니다.</p>
+<h2>파일 관리 요령</h2><p>이미지를 내려받아 다시 올리는 운영을 하려면 파일 관리 규칙이 필요합니다. 상품 코드별로 폴더를 만들고, 파일명에 순서를 넣어(예: A001-01.jpg, A001-02.jpg) 상세페이지의 이미지 순서와 맞춰두세요. 원본 HTML 파일도 같은 폴더에 함께 보관하면, 채널을 추가할 때 그 폴더 하나로 작업이 끝납니다. 자세한 운영 흐름은 <a href="/blog/detail-page-workflow/">멀티채널 워크플로 글</a>에서 다룹니다.</p>
+<h2>용량과 규격도 확인하세요</h2><p>채널마다 이미지 한 장의 최대 용량, 최대 픽셀, 허용 형식(JPG, PNG, GIF 등)이 다릅니다. 세로로 아주 긴 통이미지는 업로드가 거부되거나 자동으로 축소되어 글자가 흐려질 수 있으므로, 긴 이미지는 적당한 높이로 잘라 여러 장으로 나누는 편이 안전합니다. 이미지 안에 작은 글씨가 많다면 모바일 화면 폭(대략 360~430px)에서 읽히는지 실제 휴대폰으로 확인하세요.</p>
+<div class="content-note">다른 쇼핑몰이나 제조사의 이미지를 내려받아 재업로드하는 것은 기술적으로 가능하더라도 저작권·계약 문제와는 별개입니다. 사용 권한이 확인된 이미지만 옮기세요.</div></article>
+<aside class="article-nav"><strong>가이드 목록</strong><a href="/converter/guide/how-to-use/">처음 사용하기</a><a href="/converter/guide/smartstore-html/">스마트스토어 HTML</a><a href="/converter/guide/image-errors/">이미지 오류</a><a href="/converter/guide/html-cleanup/">HTML 정리 원리</a><a href="/converter/guide/ably-upload/">판매 채널 적용</a><a href="/converter/guide/coupang-html/">쿠팡 적용 주의점</a><a href="/converter/guide/image-hosting/" aria-current="page">이미지 호스팅 전략</a><a href="/converter/guide/mobile-layout/">모바일 레이아웃 기본기</a><a href="/converter/guide/inline-style-basics/">인라인 스타일 기초</a><a href="/converter/guide/pre-upload-checklist/">게시 전 체크리스트</a></aside></div></main>
+<footer class="site-footer"><div class="footer-inner"><span>Copyright 2026 OEZ Works.</span><div class="footer-links"><a href="/converter/guide/">전체 가이드</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의</a></div></div></footer></div></body></html>

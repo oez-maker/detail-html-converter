@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="OEZ Works의 도구가 입력 데이터를 서버로 보내지 않고 브라우저 안에서만 동작하도록 설계된 이유와 그 장단점을 설명합니다." />
+<link rel="canonical" href="https://oezworks.com/blog/browser-only-tools/" />
+<title>서버 없는 도구를 고집하는 이유 | OEZ Works 블로그</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="88">🧰</text></svg>' />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2667365474859426" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/site.css?v=20260716" />
+</head>
+<body>
+<div class="app-container">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <a class="logo" href="/">OEZ Works <span class="logo-badge">작업실</span></a>
+        <span class="logo-sub">셀러와 크리에이터를 위한 작은 웹 도구를 만들어 공개합니다.</span>
+      </div>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="/">홈</a>
+        <a href="/converter/">HTML 변환기</a>
+        <a href="/converter/guide/">사용 가이드</a>
+        <a href="/blog/" aria-current="page">블로그</a>
+        <a href="/about/">소개</a>
+        <a href="/contact/">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="article-layout">
+      <article class="article-body">
+        <span class="eyebrow">개발기</span>
+        <h1>서버 없는 도구를 고집하는 이유</h1>
+        <div class="article-meta">작성일: 2026년 6월 28일 · 예상 읽기 시간 4분</div>
+        <p class="article-lead">OEZ Works의 도구에는 공통 원칙이 하나 있습니다. 사용자가 입력한 데이터는 서버로 보내지 않고, 그 사람의 브라우저 안에서만 처리한다는 것입니다. 이 글은 왜 그런 선택을 했는지, 그리고 무엇을 포기해야 했는지에 대한 기록입니다.</p>
+
+        <h2>상세페이지는 생각보다 민감한 데이터입니다</h2>
+        <p>상세페이지 HTML에는 단순한 코드 이상이 담겨 있습니다. 아직 공개 전인 신상품의 사진과 설명, 원가 구조를 짐작할 수 있는 문구, 사입처가 드러나는 이미지 주소가 섞여 있는 경우가 많습니다. 셀러 입장에서 이런 데이터를 정체 모를 사이트의 서버에 업로드하는 것은 꺼려질 수밖에 없고, 저 역시 셀러로서 남의 서버에 제 상세페이지를 올리고 싶지 않았습니다.</p>
+        <p>그래서 변환기는 처음부터 브라우저 완결형으로 설계했습니다. HTML을 붙여넣으면 브라우저에 내장된 DOM 파서가 그 자리에서 코드를 해석하고, 변환 결과도 같은 화면에서 만들어집니다. 네트워크 탭을 열어 확인해보면 변환 과정에서 어떤 데이터도 전송되지 않는 것을 직접 볼 수 있습니다.</p>
+
+        <h2>서버가 없어서 좋은 점</h2>
+        <ul>
+          <li><strong>개인정보 부담이 없습니다.</strong> 입력 데이터를 수집하지 않으니 유출될 데이터 자체가 없습니다. <a href="/privacy/">개인정보처리방침</a>도 그만큼 단순하고 투명해집니다.</li>
+          <li><strong>속도가 빠릅니다.</strong> 업로드와 다운로드 대기 없이 붙여넣는 즉시 결과가 나옵니다. 수백 킬로바이트짜리 상세페이지도 순식간에 처리됩니다.</li>
+          <li><strong>운영이 지속 가능합니다.</strong> 서버 비용이 들지 않으니 1인 운영으로도 도구를 무료로 계속 제공할 수 있습니다. 갑자기 이용자가 늘어도 서버가 죽을 일이 없습니다.</li>
+        </ul>
+
+        <h2>포기해야 했던 것들</h2>
+        <p>물론 공짜는 아닙니다. 서버가 없으면 변환 이력을 저장해주는 기능, 여러 기기에서 이어서 작업하는 기능은 만들 수 없습니다. 이미지 파일을 대신 호스팅해주는 기능도 불가능합니다. 외부 이미지가 판매 채널에서 차단되는 문제는 변환기가 가장 자주 받는 질문인데, 서버가 없는 한 "이미지를 내려받아 채널에 직접 업로드하세요"라고 <a href="/converter/guide/image-errors/">가이드로 안내</a>하는 것이 최선입니다.</p>
+        <p>또 하나의 제약은 브라우저 성능에 의존한다는 점입니다. 아주 오래된 브라우저에서는 동작하지 않을 수 있고, 처리 속도도 사용자의 기기에 따라 달라집니다. 다만 요즘 브라우저의 성능이면 상세페이지 변환 정도는 충분하다는 것이 지금까지의 결론입니다.</p>
+
+        <h2>앞으로도 이 원칙을 지킬 겁니다</h2>
+        <p>앞으로 만들 도구도 가능한 한 브라우저 완결형을 유지할 계획입니다. 서버가 꼭 필요한 기능이 생긴다면, 무엇이 전송되고 무엇이 저장되는지 그 도구의 안내 페이지에 구체적으로 밝힌 뒤에 만들겠습니다. 도구는 편리해야 하지만, 사용자가 자기 데이터가 어디로 가는지 몰라야 편리해지는 도구라면 만들지 않는 것이 낫다고 생각합니다.</p>
+      </article>
+      <aside class="article-nav">
+        <strong>블로그 글 목록</strong>
+        <a href="/blog/roadmap/">앞으로 만들 도구들</a>
+        <a href="/blog/update-2026-07/">2026년 7월 업데이트 노트</a>
+        <a href="/blog/detail-page-workflow/">멀티채널 운영 워크플로</a>
+        <a href="/blog/browser-only-tools/" aria-current="page">서버 없는 도구를 고집하는 이유</a>
+        <a href="/blog/converter-devlog-1/">변환기 개발기 1</a>
+        <a href="/blog/why-oez-works/">OEZ Works를 시작한 이유</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 OEZ Works. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/about/">소개</a>
+        <span>·</span>
+        <a href="/privacy/">개인정보처리방침</a>
+        <span>·</span>
+        <a href="/contact/">문의</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
