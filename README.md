@@ -28,4 +28,4 @@ plus usage guides and a blog.
 
 - The converter runs entirely in the browser; user input is not sent to a backend.
 - External image URLs in converted HTML may still be blocked by the target sales channel.
-- Social links on `/about/` are placeholders — replace with real account URLs.
+- Social channels linked on `/about/`: Instagram/TikTok `@oez.maker`, YouTube `@오이지빌더`.
