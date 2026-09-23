@@ -497,6 +497,7 @@ pre code { background: none; padding: 0; }
 }
 .guide-cta strong { font-family: var(--serif); font-size: 17px; }
 .guide-cta p { margin-top: 4px; font-size: 13.5px; color: #cfc8b4; }
+.article-body .guide-cta p, .doc-card .guide-cta p { color: #cfc8b4; margin-bottom: 0; }
 .guide-cta a:not(.btn) { color: var(--paper); }
 .guide-cta .btn-primary {
   background: var(--paper);

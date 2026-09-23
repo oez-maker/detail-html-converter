@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="OEZ Works는 온라인 셀러와 크리에이터를 위한 작은 웹 도구를 만들어 무료로 공개하는 1인 작업실입니다. 상세페이지 HTML 변환기를 비롯한 도구, 사용 가이드, 개발 블로그를 제공합니다." />
+<meta name="description" content="OEZ Works는 온라인 셀러와 크리에이터를 위한 작은 웹 도구를 만들어 무료로 공개하는 1인 작업실입니다. 상세페이지 HTML 변환기, 1688 수입 원가 계산기를 비롯한 도구, 사용 가이드, 개발 블로그를 제공합니다." />
 <meta name="keywords" content="OEZ Works, 상세페이지 HTML 변환기, 셀러 도구, 무료 웹 도구, 스마트스토어, 에이블리" />
 <link rel="canonical" href="https://oezworks.com/" />
 <meta property="og:title" content="OEZ Works - 셀러를 위한 작은 웹 도구 작업실" />
@@ -26,6 +26,7 @@
       <nav class="site-nav" aria-label="사이트 메뉴">
         <a href="/" aria-current="page">홈</a>
         <a href="/converter/">HTML 변환기</a>
+        <a href="/calculator/">원가 계산기</a>
         <a href="/converter/guide/">사용 가이드</a>
         <a href="/blog/">블로그</a>
         <a href="/about/">소개</a>
@@ -64,6 +65,24 @@
           <div class="service-card-body">
             <h3>상세페이지 HTML 변환기 <span class="service-tag">운영 중</span></h3>
             <p>스마트스토어 등에서 작성한 상세페이지 HTML을 붙여넣으면 편집기 전용 코드를 걷어내고, 에이블리 같은 모바일 판매 채널에 바로 붙여넣을 수 있는 단순한 HTML로 정리합니다. 변환 결과와 미리보기를 한 화면에서 비교할 수 있습니다.</p>
+            <span class="service-link">도구 사용하기 →</span>
+          </div>
+        </a>
+        <a class="service-card" href="/calculator/">
+          <div class="service-card-visual" aria-hidden="true">
+            <svg viewBox="0 0 220 110" width="204" height="102" role="img">
+              <rect x="8" y="8" width="204" height="94" rx="5" fill="#fdfbf5" stroke="#23201a" stroke-width="1.5"/>
+              <path d="M8 30 H212" stroke="#23201a" stroke-width="1"/>
+              <path d="M8 52 H212 M8 74 H212 M96 30 V102 M154 30 V102" stroke="#e6ded0" stroke-width="1"/>
+              <text x="20" y="23" font-size="10" font-family="Georgia,serif" fill="#23201a">1688 ¥ → ₩</text>
+              <rect x="20" y="37" width="60" height="7" rx="2" fill="#dde3b8"/><rect x="20" y="59" width="48" height="7" rx="2" fill="#dde3b8"/><rect x="20" y="81" width="54" height="7" rx="2" fill="#dde3b8"/>
+              <rect x="108" y="37" width="34" height="7" rx="2" fill="#e6ded0"/><rect x="108" y="59" width="28" height="7" rx="2" fill="#e6ded0"/><rect x="108" y="81" width="32" height="7" rx="2" fill="#e6ded0"/>
+              <rect x="166" y="37" width="36" height="7" rx="2" fill="#4d5c1e"/><rect x="166" y="59" width="30" height="7" rx="2" fill="#4d5c1e"/><rect x="166" y="81" width="34" height="7" rx="2" fill="#4d5c1e"/>
+            </svg>
+          </div>
+          <div class="service-card-body">
+            <h3>1688 수입 원가 계산기 <span class="service-tag">운영 중</span></h3>
+            <p>1688 주문내역을 붙여넣고 실제 결제액, 배대지 비용, 관부가세를 입력하면 상품별 낱개 원가를 계산합니다. 입력 내용은 브라우저 안에서만 처리하며, 결과는 표로 복사하거나 엑셀 파일로 내려받을 수 있습니다.</p>
             <span class="service-link">도구 사용하기 →</span>
           </div>
         </a>
@@ -110,9 +129,11 @@
       <div class="section-heading">
         <span class="eyebrow">GUIDES</span>
         <h2 id="guides-title">도구 사용 가이드</h2>
-        <p>상세페이지 HTML 변환기의 사용법과 상세페이지 운영 노하우를 주제별로 정리했습니다.</p>
+        <p>상세페이지 HTML 변환기와 1688 수입 원가 계산기의 사용법, 운영 노하우를 주제별로 정리했습니다.</p>
       </div>
       <ul class="post-list">
+        <li><a href="/calculator/guide/how-to-use/"><span><span class="post-title">1688 수입 원가 계산기 처음 사용하기</span></span><span class="post-date">2026.09.23</span></a></li>
+        <li><a href="/calculator/guide/import-costs/"><span><span class="post-title">배대지·통관·관부가세 비용 입력과 배분</span></span><span class="post-date">2026.09.23</span></a></li>
         <li><a href="/converter/guide/pre-upload-checklist/"><span><span class="post-title">상세페이지 게시 전 최종 점검 체크리스트</span></span><span class="post-date">2026.07.14</span></a></li>
         <li><a href="/converter/guide/inline-style-basics/"><span><span class="post-title">인라인 스타일로 상세페이지 만들기 기초</span></span><span class="post-date">2026.07.09</span></a></li>
         <li><a href="/converter/guide/mobile-layout/"><span><span class="post-title">모바일 상세페이지 레이아웃 기본기</span></span><span class="post-date">2026.07.05</span></a></li>
@@ -120,7 +141,7 @@
         <li><a href="/converter/guide/coupang-html/"><span><span class="post-title">쿠팡 상세페이지에 HTML 적용할 때 주의점</span></span><span class="post-date">2026.06.26</span></a></li>
         <li><a href="/converter/guide/how-to-use/"><span><span class="post-title">상세페이지 HTML 변환기 처음 사용하기</span></span><span class="post-date">2026.06.18</span></a></li>
       </ul>
-      <div class="guide-cta"><div><strong>가이드 전체 보기</strong><p>스마트스토어 HTML 준비, 이미지 오류 해결 등 전체 가이드 목록을 확인하세요.</p></div><a class="btn btn-primary" href="/converter/guide/">가이드 목록</a></div>
+      <div class="guide-cta"><div><strong>가이드 전체 보기</strong><p>도구별 전체 가이드 목록을 확인하세요.</p></div><div style="display:flex;flex-wrap:wrap;gap:8px"><a class="btn btn-primary" href="/converter/guide/">변환기 가이드</a><a class="btn btn-primary" href="/calculator/guide/">원가 계산기 가이드</a></div></div>
     </section>
 
     <section class="content-section" aria-labelledby="principles-title">
