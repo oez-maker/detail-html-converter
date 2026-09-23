@@ -5,14 +5,26 @@ plus usage guides and a blog.
 
 ## Structure
 
-- `/` — hub homepage (site intro, service cards, latest posts)
-- `/about/`, `/privacy/`, `/contact/` — shared site pages (single source at root)
+- `/` — hub homepage (tools, guides, latest posts)
+- `/converter/`, `/calculator/` — the tools
+- `/guide/` — guide hub listing every tool's guides
+- `/converter/guide/`, `/calculator/guide/` — per-tool guide index; each tool has
+  a `how-to-use/` start guide and a `faq/` page
 - `/blog/` — devlogs, update notes, how-to articles
-- `/converter/` — Detail HTML Converter tool
-- `/converter/guide/` — converter usage guides
-- `/calculator/` — 1688 import cost calculator (static build from the private `icm` repo — do not edit by hand)
-- `/calculator/guide/` — cost calculator usage guides (maintained here)
+- `/about/`, `/privacy/`, `/contact/` — shared site pages
 - `/converter/about|privacy|contact/` — redirect stubs to the root pages (kept for old indexed URLs)
+
+`/calculator/index.html` and `/calculator/assets/` are a static build from the private
+`zihopark/icm` repo — do not edit by hand (see below).
+
+### Page conventions
+
+Every static page uses the same header (logo → `/`, nav: HTML 변환기 · 원가 계산기 · 가이드 ·
+블로그 · 소개) and the same footer. The current nav item gets `aria-current="page"`; the
+section a page belongs to gets `aria-current="true"` (all tool guides belong to 가이드).
+Guide pages start with a breadcrumb (가이드 › tool › page) and end with a CTA to the tool.
+When adding a guide, also add it to the tool's guide index, the `/guide/` hub, the
+article sidebar of that tool's guides, and `sitemap.xml`.
 
 ## Updating the cost calculator
 
