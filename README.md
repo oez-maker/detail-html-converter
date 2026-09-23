@@ -10,7 +10,20 @@ plus usage guides and a blog.
 - `/blog/` — devlogs, update notes, how-to articles
 - `/converter/` — Detail HTML Converter tool
 - `/converter/guide/` — converter usage guides
+- `/calculator/` — 1688 import cost calculator (static build from the private `icm` repo — do not edit by hand)
+- `/calculator/guide/` — cost calculator usage guides (maintained here)
 - `/converter/about|privacy|contact/` — redirect stubs to the root pages (kept for old indexed URLs)
+
+## Updating the cost calculator
+
+The calculator bundle is built in the `icm` repo:
+
+```bash
+VITE_APP_URL=https://<원가노트 app URL> pnpm --filter web build:calculator
+```
+
+Then replace `calculator/index.html` and `calculator/assets/` with the contents of
+`apps/web/dist-calculator/`. Leave `calculator/guide/` untouched.
 
 ## Deploy
 
