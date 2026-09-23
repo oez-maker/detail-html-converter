@@ -25,8 +25,16 @@ VITE_APP_URL=https://<원가노트 app URL> pnpm --filter web build:calculator
 Then replace `calculator/index.html` and `calculator/assets/` with the contents of
 `apps/web/dist-calculator/`. Leave `calculator/guide/` untouched.
 
-`VITE_APP_URL` is the deployed 원가노트 member app. Until that app is deployed, build
-without it and keep the guides free of sign-up/workspace references.
+`VITE_APP_URL` is the deployed 원가노트 member app. It is not deployed yet, so the current
+bundle was built with `VITE_APP_URL=https://oezworks.com` and then hand-patched in
+`calculator/assets/calculator-*.js` to hide the links that would 404 there
+(서비스 소개 / 로그인 / 무료 회원가입 in the header, and the PERSONAL WORKSPACE banner):
+
+- `function eu(...)` (external app link) returns `null` when a site config is set
+- the `PERSONAL WORKSPACE` `<section>` is prefixed with `false&&`
+
+A rebuild drops these patches. Re-apply them, or better, make `icm` hide those links
+when no app URL is configured, until the member app is live.
 
 ## Deploy
 
