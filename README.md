@@ -16,7 +16,7 @@ plus usage guides and a blog.
 
 ## Updating the cost calculator
 
-The calculator bundle is built in the `icm` repo:
+The calculator bundle is built in the private `zihopark/icm` repo:
 
 ```bash
 VITE_APP_URL=https://<원가노트 app URL> pnpm --filter web build:calculator
@@ -24,6 +24,9 @@ VITE_APP_URL=https://<원가노트 app URL> pnpm --filter web build:calculator
 
 Then replace `calculator/index.html` and `calculator/assets/` with the contents of
 `apps/web/dist-calculator/`. Leave `calculator/guide/` untouched.
+
+`VITE_APP_URL` is the deployed 원가노트 member app. Until that app is deployed, build
+without it and keep the guides free of sign-up/workspace references.
 
 ## Deploy
 
